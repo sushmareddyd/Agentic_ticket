@@ -56,29 +56,6 @@ Customer Ticket Submitted
 
 ---
 
-## Why We Did Not Use LangChain or LangGraph
-
-LangChain and LangGraph are frameworks that wrap LLM-based agent logic.
-We deliberately built our agents from scratch using pure Python because:
-
-1. This assignment evaluates **understanding** of agentic AI — not framework usage
-2. Building from scratch proves we know what these frameworks do under the hood
-3. Every line of code is readable and explainable without external documentation
-4. No API key or paid LLM service is required to run the prototype
-
-| LangGraph Concept | Our Implementation |
-|-------------------|--------------------|
-| Agent nodes | 5 Python classes with single responsibilities |
-| Graph edges | Orchestrator calling agents in sequence |
-| State management | processed_tickets list in the Orchestrator |
-| Conditional routing | Escalation Agent deciding AI vs Human path |
-| Memory | Prevention Agent ticket_history dictionary |
-
-In a production system, we would use LangGraph for the agent graph,
-GPT-4 for dynamic classification, and RAG for knowledge-base-driven resolutions.
-
----
-
 ## Tech Stack
 
 | Layer | Technology | Why |
@@ -244,3 +221,4 @@ python seed_data.py
 | Real-world impact with sample data and metrics | 12 sample tickets, 5 live metrics, cost savings, category breakdown |
 
 ---
+
