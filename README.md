@@ -166,59 +166,7 @@ Open a second terminal and run:
 python seed_data.py
 ```
 
----
-
-## Demo Script (for presentation)
-
-1. Start python app.py in Terminal 1
-2. Open http://localhost:5000 in browser
-3. Run python seed_data.py in Terminal 2
-4. Show the dashboard — metrics, category bars, ticket table
-5. Submit a live ticket to show agents firing:
-   - Name: John Smith
-   - Issue: My login is not working, it is urgent, I need access immediately
-   - Watch all 5 agents light up in the pipeline
-6. Submit an escalation ticket to show human routing:
-   - Name: Angry Customer
-   - Issue: This is the second time my account broke, I want to speak to a manager. Unacceptable!
-   - Watch Escalation Agent turn yellow and route to Human Review
-7. After 3 Authentication tickets — show Prevention Alert firing on left panel
 
 ---
 
-## Scalability Path (Production)
-
-| Current Prototype | Production Version |
-|------------------|--------------------|
-| Keyword matching classifier | Fine-tuned BERT or GPT-4 classifier |
-| Template-based resolutions | RAG pipeline with live knowledge base |
-| Flask synchronous server | FastAPI with async processing |
-| In-memory storage | PostgreSQL persistent database |
-| Manual prevention threshold | Statistical anomaly detection |
-| Single server | AWS / GCP with auto-scaling |
-| Polling every 3 seconds | WebSocket for true real-time updates |
-| No authentication | JWT-based user authentication |
-
----
-
-## Limitations (Honest Assessment)
-
-- Classifier uses keyword matching, not a trained ML model
-- Resolution messages are templates, not dynamically generated
-- Data resets when server restarts (no database)
-- Prevention threshold is hardcoded at 3 tickets
-- No user authentication or access control
-
----
-
-## Assignment Objectives Mapping
-
-| Objective | How Satisfied |
-|-----------|--------------|
-| Demonstrate understanding of agentic AI concepts | 5 agents showing autonomy, orchestration, proactive decision-making |
-| Design system to reduce and prevent tickets | Resolution Agent reduces load, Prevention Agent prevents future tickets |
-| Functional prototype with technical proficiency | Flask server, 5 agents, live dashboard all working end-to-end |
-| Real-world impact with sample data and metrics | 12 sample tickets, 5 live metrics, cost savings, category breakdown |
-
----
 
